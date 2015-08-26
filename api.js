@@ -5,7 +5,7 @@
       api_key: {
         name: "api_key",
         in: "header",
-      }
+      },
       password: function(request, owners) {
         var creds = request.headers.Authorization.substring(6);
         if (!creds) return null;
