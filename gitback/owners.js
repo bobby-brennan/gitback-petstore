@@ -17,6 +17,7 @@
     owner.pets = this.collections.pets.get().filter(function(pet) {
       return pet.owners.indexOf(owner.id) !== -1;
     })
+    return owner;
   },
   write: function(owner) {
     owner.password = this.utils.hash(owner.password);
