@@ -14,11 +14,11 @@
     },
   },
   read: function(owner) {
-    owner.pets = Collections.pets.get().filter(function(pet) {
+    owner.pets = this.collections.pets.get().filter(function(pet) {
       return pet.owners.indexOf(owner.id) !== -1;
     })
   },
   write: function(owner) {
-    owner.password = Utils.hash(owner.password);
+    owner.password = this.utils.hash(owner.password);
   }
 }
