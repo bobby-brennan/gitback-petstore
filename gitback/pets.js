@@ -2,6 +2,7 @@
   id: "name",
   schema: {
     type: "object",
+    additionalProperties: false,
     properties: {
       name: {type: "string"},
       age: {type: "number"},

@@ -1,6 +1,7 @@
 {
   schema: {
     type: "object",
+    additionalProperties: false,
     properties: {
       name: {type: "string"},
       password: {type: "string"},
