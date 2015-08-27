@@ -16,7 +16,8 @@
   read: function(owner) {
     owner.pets = this.collections.pets.get().filter(function(pet) {
       return pet.owners.indexOf(owner.id) !== -1;
-    })
+    });
+    delete owner.password;
     return owner;
   },
   write: function(owner) {
