@@ -24,7 +24,7 @@
   },
   write: function(pet) {
     pet.type = pet.type || "unknown";
-    if (allowedTypes.indexOf(pet.type) !== -1) return null;
+    if (allowedTypes.indexOf(pet.type) !== -1) throw new Error("Type " + pet.type + " not allowed");
     return pet;
   },
   variables: {
