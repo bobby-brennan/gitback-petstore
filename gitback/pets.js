@@ -19,7 +19,8 @@
     get: function(pet) {
       var self = this;
       pet.owners = pet.owners.map(function(owner) {
-        return self.collections.owners.get(owner);
+        owner = self.collections.owners.get(owner);
+        return {id: owner.id, name: owner.name};
       });
       return pet;
     },
