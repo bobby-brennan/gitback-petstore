@@ -7,6 +7,7 @@
       name: {type: "string"},
       age: {type: "number"},
       type: {type: "string"},
+      owners: {type: "array", items: {type: "string"}}
     }
   },
   access: {
